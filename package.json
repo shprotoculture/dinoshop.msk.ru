@@ -17,8 +17,7 @@
     "body-parser": "^1.18.3",
     "cookie-universal-nuxt": "^2.0.14",
     "element-ui": "^2.5.4",
-    "nuxt": "^2.0.0",
-    "woocommerce-api": "^1.4.2"
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
