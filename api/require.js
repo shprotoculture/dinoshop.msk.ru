@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { wooConfig } from './woocommerce-api.js';
+import { wooConfig } from './wooConfig';
 
 export default function (req, res, next) {
-    
-    if(req.body.event === 'payment.waiting_for_capture') {
+
+    if (req.body.event === 'payment.waiting_for_capture') {
         let data = {
             id: req.body.object.id,
             value: req.body.object.amount.value,
@@ -19,7 +19,7 @@ export default function (req, res, next) {
         });
     }
 
-    if(req.body.event === 'payment.succeeded') {
+    if (req.body.event === 'payment.succeeded') {
         let data = {
             status: 'completed'
         };

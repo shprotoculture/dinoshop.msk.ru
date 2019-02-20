@@ -5,13 +5,13 @@ module.exports = {
      */
     head: {
         title: 'Dinoshop',
-        meta: [ 
+        meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'Dinoshop' }
         ],
-        link: [ 
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'} 
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
     css: [
@@ -30,8 +30,7 @@ module.exports = {
         /*
          ** Run ESLint on save
          */
-        extend(config, { isDev, isClient })
-        {
+        extend(config, { isDev, isClient }) {
             if (isDev && isClient) {
                 config.module.rules.push({
                     enforce: 'pre',
@@ -50,5 +49,8 @@ module.exports = {
     serverMiddleware: [
         bodyParser.json(),
         { path: '/yandex-check', handler: '~/api/require.js' }
+    ],
+    plugins: [
+        { src: '~/plugins/element-ui.js', ssr: true }
     ]
 }

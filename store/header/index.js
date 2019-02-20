@@ -1,14 +1,14 @@
 export const state = () => ({
     siteNavigationList: [
-        { title: 'Dinoshop', to: '/' },
-        { title: 'Каталог', to: '/catalog' },
-        { title: 'Сертификаты', to: '/certificates' },
-        { title: 'Подарок на день рождение', to: '/gift' },
-        { title: 'Доставка', to: '/delivery' },
+        { title: 'Dinoshop', to: '/', exact: true },
+        { title: 'Каталог', to: '/catalog', exact: false },
+        { title: 'Сертификаты', to: '/certificates', exact: true },
+        { title: 'Подарок на день рождение', to: '/gift', exact: true },
+        { title: 'Доставка', to: '/delivery', exact: true },
     ],
     mobileMenuIsActive: false
 });
-  
+
 export const mutations = {
     toggleMobileMenu(state) {
         state.mobileMenuIsActive = !state.mobileMenuIsActive;

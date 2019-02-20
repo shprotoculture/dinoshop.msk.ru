@@ -1,10 +1,8 @@
 <template lang="pug">
+    .cat
 </template>
 
 <script>
-import axios from 'axios';
-import { wooConfig } from '~/api/wooConfig';
-
 export default {
     layout: 'catalog'
 }
