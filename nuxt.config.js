@@ -51,6 +51,11 @@ module.exports = {
         { path: '/yandex-check', handler: '~/api/require.js' }
     ],
     plugins: [
-        { src: '~/plugins/element-ui.js', ssr: true }
+        { src: '~/plugins/element-ui.js', ssr: true },
+        { src: '~/plugins/cart.js', ssr: true },
+        { src: '~/plugins/vue-paginate.js', ssr: true },
+    ],
+    modules: [
+        'cookie-universal-nuxt',
     ]
 }

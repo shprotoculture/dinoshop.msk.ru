@@ -14,25 +14,22 @@ export default {
         AppCatalogProductsList
     },
     async asyncData({ params, query }) {
-        let catId = 16;
+
+        let getSubcategoryID = await axios.get('products/categories?slug=' + params.subcategory, wooConfig);
+        let id = getSubcategoryID.data[0] ? getSubcategoryID.data[0].id : '';
+
         let page = query.page ? '&page=' + query.page : '';
 
-        const allProductsData = await axios.get('products?category=' + catId + page, wooConfig);
+        let getProductsData = await axios.get('products?category=' + id + page, wooConfig);
 
         return {
-            allProducts: allProductsData.data
+            getProducts: getProductsData.data
         };
     },
     computed: {
         products() {
-            let subcategory = this.$route.params.subcategory;
-            return this.allProducts;
+            return this.getProducts;
         }
-    },
-    mounted() {
-        axios.get('products?fields=ksldf', wooConfig).then(response => {
-            console.log(response.data);
-        })
     }
 }
 </script>

@@ -1,15 +1,15 @@
 <template lang="pug">
     #app
-        app-header
+        keep-alive
+            app-header
         main.main
             section.section
                 .container
                     .row
                         .col-lg-3.p-15
                             app-catalog-categories
-                        .col-lg-3.p-15
+                        .col-lg-9.p-15
                             nuxt
-        nuxt
 </template>
 
 <script>

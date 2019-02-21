@@ -1,6 +1,7 @@
 <template lang="pug">
     #app
-        app-header
+        keep-alive
+            app-header
         nuxt
 </template>
 

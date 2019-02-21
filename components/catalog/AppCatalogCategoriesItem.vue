@@ -29,6 +29,12 @@ export default {
 		font-size: 12px;
 		font-weight: 500;
 		text-transform: uppercase;
+		display: inline-block;
+		transition: 0.15s ease;
+
+		&:hover {
+			color: $c-green;
+		}
 
 		&.nuxt-link-active {
 			color: $c-green;
@@ -47,6 +53,12 @@ export default {
 			color: #000;
 			font-size: 13px;
 			font-weight: 500;
+			display: inline-block;
+			transition: 0.15s ease;
+
+			&:hover {
+				color: $c-green;
+			}
 
 			&.nuxt-link-active {
 				color: $c-green;
