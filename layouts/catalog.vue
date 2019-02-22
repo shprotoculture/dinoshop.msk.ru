@@ -1,7 +1,6 @@
 <template lang="pug">
     #app
-        keep-alive
-            app-header
+        app-header
         main.main
             section.section
                 .container
