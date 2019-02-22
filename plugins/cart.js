@@ -1,3 +1,3 @@
 export default function ({ store }) {
-    store.commit("cart/setProductsInCart", store.$cookies.get('products') || {});
+    store.dispatch("cart/setProductsInCart", store.$cookies.get('products') || {});
 }

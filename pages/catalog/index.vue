@@ -6,7 +6,8 @@ import axios from 'axios';
 import { wooConfig } from '~/api/wooConfig';
 
 export default {
-    layout: 'catalog'
+    layout: 'catalog',
+    middleware: 'redirect'
 }
 </script>
 

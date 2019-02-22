@@ -28,5 +28,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.catalog {
+	&-enter {
+		opacity: 0;
+		transition: 0.4s ease;
+	}
+
+	&-leave-to {
+		opacity: 0;
+		transition: 0.4s ease;
+	}
+}
 </style>

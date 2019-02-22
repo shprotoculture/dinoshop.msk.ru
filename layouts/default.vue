@@ -1,15 +1,19 @@
 <template lang="pug">
     #app
-        keep-alive
-            app-header
-        nuxt
+        app-header
+        transition(name="page")
+            nuxt
 </template>
 
 <script>
 import AppHeader from '~/components/header/AppHeader';
 export default {
     components: {
-        AppHeader
+        AppHeader 
     }
 }
 </script>
+
+<style lang="scss">
+</style>
+
