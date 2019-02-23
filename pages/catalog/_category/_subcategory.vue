@@ -10,6 +10,7 @@ import AppCatalogProductsList from '~/components/catalog/AppCatalogProductsList'
 
 export default {
     layout: 'catalog',
+    transition: 'test',
     components: {
         AppCatalogProductsList
     },
@@ -35,4 +36,16 @@ export default {
 </script>
 
 <style lang="scss">
+.test {
+	&-enter {
+		opacity: 0;
+	}
+	&-enter-active {
+		transition: 0.5s ease;
+	}
+	&-leave-to {
+		transition: 0.5s ease;
+		opacity: 0;
+	}
+}
 </style>

@@ -2,7 +2,7 @@
 .product-item
     .product-item__image-wrapper.p-15
         a.product-item__image-link(href="#" data-fancybox)
-            img.product-item__image(:src="getProductImage")
+            img.product-item__image(:src="getProductImage" :alt="product.name")
     .product-item__content.p-15
         h4.product-item__content-title {{ product.name }}
         .product-item__content-desc(v-html="product.description")

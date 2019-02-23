@@ -102,13 +102,13 @@ export default {
 			align-items: stretch;
 			justify-content: flex-start;
 			background: #fff;
-			border: 1px solid #f2f2f2;
+			border: 1px solid #e5e5e5;
 			border-bottom: none;
 
 			&-col {
 				padding: 15px;
 				text-align: center;
-				border-right: 1px solid #f2f2f2;
+				border-right: 1px solid #e5e5e5;
 				font-size: 14px;
 				font-weight: 500;
 
@@ -147,7 +147,7 @@ export default {
 			padding: 15px;
 			background: #fff;
 			text-align: right;
-			border: 1px solid #f2f2f2;
+			border: 1px solid #e5e5e5;
 		}
 	}
 

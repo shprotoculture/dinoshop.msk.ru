@@ -8,7 +8,8 @@
                         .col-lg-3.p-15
                             app-catalog-categories
                         .col-lg-9.p-15
-                            nuxt
+                            transition(name="page" @after-enter="afterPageEnter()")
+                                nuxt
 </template>
 
 <script>
@@ -24,6 +25,11 @@ export default {
         listAllCategories() {
             return this.$store.state.catalog.categories.listAllCategories;
         }
+    },
+    methods: {
+      afterPageEnter() {
+        this.$store.commit('header/closeMobileMenu');
+      }
     }
 }
 </script>

@@ -23,31 +23,32 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/scss/global/vars';
+@import "~assets/scss/global/vars";
 
 .catalog-pagination {
-    margin-top: 30px;
+	margin-top: 30px;
 
-    &__list {
-        display: flex;
-    }
+	&__list {
+		display: flex;
+	}
 
-    &__item {
-        margin: 0 10px;
-    }
+	&__item {
+		margin: 0 5px;
+	}
 
-    &__link {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        text-align: center;
-        line-height: 30px;
-
-        &_active {
-            background: $c-green;
-            color: #fff;
-        }
-    }
+	&__link {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		text-align: center;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: 500;
+		&_active {
+			background: $c-green;
+			color: #fff;
+		}
+	}
 }
 </style>

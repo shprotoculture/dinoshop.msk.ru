@@ -11,12 +11,15 @@ export const state = () => ({
 export const mutations = {
     addProductToCart(state, payload) {
         Vue.set(state.productsInCart, payload.id, payload.qty);
+        this.$cookies.set('products', state.productsInCart, 7);
     },
     removeProductFromCart(state, payload) {
         Vue.delete(state.productsInCart, payload);
+        this.$cookies.set('products', state.productsInCart, 7);
     },
     setProductsInCart(state, payload) {
         state.productsInCart = payload;
+        this.$cookies.set('products', state.productsInCart, 7);
     },
     setTotalPrice(state, payload) {
         state.totalPrice = payload;

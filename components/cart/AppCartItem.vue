@@ -19,6 +19,7 @@ import { wooConfig } from '~/api/wooConfig';
 import AppQtyInput from '~/components/others/AppQtyInput';
 export default {
 	props: ['productID'],
+	transition: 'test',
     components: {
         AppQtyInput
 	},
@@ -43,7 +44,6 @@ export default {
 		changeQty(e) {
             if (e <= 0 || !e) {
                 this.$store.dispatch("cart/removeProductFromCart", this.id);
-                this.$cookies.set("products", this.productsInCart, 7);
             } else {
                 this.$store.dispatch("cart/addProductToCart", {
                     id: this.id,
@@ -54,7 +54,7 @@ export default {
 		},
 		removeItem (id) {
             this.$store.dispatch('cart/removeProductFromCart', id);
-            this.$cookies.set('products', this.getProductsInCart, 7);
+			console.log(this.productsInCart)
         }
 	},
 	mounted() {
@@ -68,13 +68,26 @@ export default {
 <style lang="scss">
 @import "~assets/scss/global/vars";
 
+.test {
+	&-enter {
+		opacity: 0;
+	}
+	&-enter-active {
+		transition: 0.5s ease;
+	}
+	&-leave-to {
+		transition: 0.5s ease;
+		opacity: 0;
+	}
+}
+
 .cart-item {
 	display: flex;
 	align-items: stretch;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	background: #fff;
-	border: 1px solid #f2f2f2;
+	border: 1px solid #e5e5e5;
 	border-bottom: none;
 
 	&__col {
@@ -82,7 +95,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border-right: 1px solid #f2f2f2;
+		border-right: 1px solid #e5e5e5;
 
 		&:last-child {
 			border-right: none;

@@ -4,6 +4,9 @@ module.exports = {
      ** Headers of the page
      */
     head: {
+        htmlAttrs: {
+            lang: 'ru'
+        },
         title: 'Dinoshop',
         meta: [
             { charset: 'utf-8' },
