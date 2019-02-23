@@ -1,0 +1,20 @@
+.button {
+    border: none;
+    display: inline-block;
+    transition: .25s ease;
+    text-align: center;
+    &_primary {
+        background: $c-green;
+        color: #fff;
+
+        &:hover {
+            background: $c-green--h;
+        }
+    }
+
+    &_medium {
+        width: 190px;
+        height: 45px;
+        line-height: 45px;
+    }
+}

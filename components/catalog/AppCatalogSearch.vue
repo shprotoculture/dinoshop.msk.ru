@@ -1,8 +1,9 @@
 <template lang="pug">
     .catalog-search
         form(@submit.prevent="searchProducts")
-            input.catalog-search__field(type="text" ref="search-input")
-            button(type="submit") Поиск
+            input.catalog-search__field(type="text" ref="search-input" placeholder="Поиск")
+            button.catalog-search__button(type="submit")
+                i.far.fa-search
 </template>
 
 <script>
@@ -43,4 +44,33 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~assets/scss/global/vars';
+
+.catalog-search {
+    width: 100%;
+    padding: 0 0 15px;
+    position: relative;
+
+    &__field {
+        width: 100%;
+        height: 45px;
+        padding-left: 15px;
+        position: relative;
+        z-index: 1;
+        border: 1px solid #e5e5e5
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 2;
+        width: 45px;
+        height: 45px;
+        top: 0;
+        right: 0;
+        background: none;
+        border: none;
+        border-left: 1px solid #e5e5e5;
+        color: $c-green;
+    }
+}
 </style>

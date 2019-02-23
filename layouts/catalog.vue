@@ -15,11 +15,12 @@
 <script>
 import AppHeader from '~/components/header/AppHeader';
 import AppCatalogCategories from '~/components/catalog/AppCatalogCategories';
-
+import AppCatalogSearch from '~/components/catalog/AppCatalogSearch';
 export default {
     components: {
         AppCatalogCategories,
-        AppHeader
+        AppHeader,
+        AppCatalogSearch
     },
     computed: {
         listAllCategories() {
@@ -29,6 +30,9 @@ export default {
     methods: {
       afterPageEnter() {
         this.$store.commit('header/closeMobileMenu');
+      },
+      searchProduct() {
+
       }
     }
 }

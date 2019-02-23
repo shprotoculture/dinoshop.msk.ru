@@ -13,3 +13,11 @@
         padding-left: 3px;
     }
 }
+
+.section-heading {
+    margin-bottom: 60px;
+    &__title {
+        font-size: 36px;
+        font-weight: 300;
+    }
+}
