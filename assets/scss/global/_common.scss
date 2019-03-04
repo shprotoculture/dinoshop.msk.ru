@@ -1,5 +1,9 @@
 .section {
     padding: 60px 0;
+
+    &_grey {
+        background: #f7f7f7;
+    }
 }
 
 .currency-label {
@@ -15,7 +19,7 @@
 }
 
 .section-heading {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     &__title {
         font-size: 36px;
         font-weight: 300;
